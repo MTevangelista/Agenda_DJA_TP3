@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText_Nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Email "
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/editText_Nome"
+        app:layout_constraintStart_toStartOf="@+id/editText_Nome"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Nome" />
+
+    <EditText
+        android:id="@+id/editText_Senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="numberPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editText_Email"
+        app:layout_constraintStart_toStartOf="@+id/editText_Email"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Email" />
+
+    <EditText
+        android:id="@+id/editText_Celular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Celular"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/editText_Senha"
+        app:layout_constraintStart_toStartOf="@+id/editText_Senha"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Senha" />
+
+    <EditText
+        android:id="@+id/editText_Telefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Telefone"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/editText_Celular"
+        app:layout_constraintStart_toStartOf="@+id/editText_Celular"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Celular" />
+
+    <EditText
+        android:id="@+id/editText_CPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="CPF"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editText_Telefone"
+        app:layout_constraintStart_toStartOf="@+id/editText_Telefone"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Telefone" />
+
+    <EditText
+        android:id="@+id/editText_Cidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Cidade "
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editText_CPF"
+        app:layout_constraintStart_toStartOf="@+id/editText_CPF"
+        app:layout_constraintTop_toBottomOf="@+id/editText_CPF" />
+
+    <Button
+        android:id="@+id/button_Salvar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Salvar"
+        app:layout_constraintEnd_toStartOf="@+id/button_Limpar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Cidade" />
+
+    <Button
+        android:id="@+id/button_Limpar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Limpar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_Salvar"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Cidade" />
+
+    <Button
+        android:id="@+id/button_VisualizarContatos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Visualizar Contatos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Salvar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
