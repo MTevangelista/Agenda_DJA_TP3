@@ -14,25 +14,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
 
     private lateinit var mDb: FirebaseFirestore
 
-    private lateinit var userNome: Editable
-    private lateinit var userEmail: Editable
-    private lateinit var userSenha: Editable
-    private lateinit var userCelular: Editable
-    private lateinit var userTelefone: Editable
-    private lateinit var userCPF: Editable
-    private lateinit var userCidade: Editable
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        userNome = editText_Nome.text
-        userEmail = editText_Email.text
-        userSenha = editText_Senha.text
-        userCelular = editText_Celular.text
-        userTelefone = editText_Telefone.text
-        userCPF = editText_CPF.text
-        userCidade = editText_Cidade.text
 
         mDb = FirebaseFirestore.getInstance()
         setListener()
@@ -40,13 +24,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
 
     override fun onClick(view: View) {
         var btnId = view.id
-//        userNome = editText_Nome.text
-//        userEmail = editText_Email.text
-//        userSenha = editText_Senha.text
-//        userCelular = editText_Celular.text
-//        userTelefone = editText_Telefone.text
-//        userCPF = editText_CPF.text
-//        userCidade = editText_Cidade.text
+        var userNome = editText_Nome.text
+        var userEmail = editText_Email.text
+        var userSenha = editText_Senha.text
+        var userCelular = editText_Celular.text
+        var userTelefone = editText_Telefone.text
+        var userCPF = editText_CPF.text
+        var userCidade = editText_Cidade.text
 
         when (btnId) {
             R.id.button_Salvar -> {
