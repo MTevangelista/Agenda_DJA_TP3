@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import br.projeto.agenda_dja_tp3.model.User
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_contato.*
-import java.security.Provider
 
 class ContatoActivity : AppCompatActivity() {
 
@@ -28,9 +27,13 @@ class ContatoActivity : AppCompatActivity() {
         mDb.collection("users")
             .get()
             .addOnSuccessListener {
-                users.addAll(it.toObjects(User::class.java))
-                my_recycler_view.adapter=adapter
-                my_recycler_view.layoutManager= LinearLayoutManager(this)
+                if(!it.isEmpty){
+                    users.addAll(it.toObjects(User::class.java))
+                    my_recycler_view.adapter=adapter
+                    my_recycler_view.layoutManager= LinearLayoutManager(this)
+                } else{
+                    setContentView(R.layout.layout_message_erro)
+                }
             }
             .addOnFailureListener{
                 Toast.makeText(baseContext, "Erro", Toast.LENGTH_LONG).show()
