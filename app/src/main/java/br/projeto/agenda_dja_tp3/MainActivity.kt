@@ -3,7 +3,6 @@ package br.projeto.agenda_dja_tp3
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
 import android.view.View
 import android.widget.Toast
 import br.projeto.agenda_dja_tp3.model.User

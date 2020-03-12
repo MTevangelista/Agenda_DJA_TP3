@@ -1,6 +1,6 @@
 package br.projeto.agenda_dja_tp3.model
 
-class User (
+data class User (
     var nome: String,
     var email: String,
     var senha: String,
@@ -8,4 +8,6 @@ class User (
     var telefone: String,
     var CPF: String,
     var cidade: String
-)
+){
+    constructor():this("", "", "", "", "", "", "")
+}
