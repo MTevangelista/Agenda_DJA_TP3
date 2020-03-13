@@ -15,7 +15,7 @@ class DetailsActivity : AppCompatActivity() {
         var user = intent.getSerializableExtra("user") as User
         textViewNome.text = user.nome
         textViewEmail.text = user.email
-        textViewSenha.text = "Confidencial"
+        textViewSenha.text = user.senha
         textViewCelular.text = user.celular
         textViewTelefone.text = user.telefone
         textViewCPF.text= user.CPF
