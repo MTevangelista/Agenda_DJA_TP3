@@ -3,14 +3,13 @@ package br.projeto.agenda_dja_tp3
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.projeto.agenda_dja_tp3.model.User
-import kotlinx.android.synthetic.main.activity_details2.*
-import kotlinx.android.synthetic.main.layout_user.*
+import kotlinx.android.synthetic.main.activity_details.*
 
 class DetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_details2)
+        setContentView(R.layout.activity_details)
 
         var user = intent.getSerializableExtra("user") as User
         textViewNome.text = user.nome
