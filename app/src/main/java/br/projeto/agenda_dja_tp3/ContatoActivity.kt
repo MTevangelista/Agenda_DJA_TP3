@@ -38,11 +38,10 @@ class ContatoActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 if(!it.isEmpty){
                     users.addAll(it.toObjects(User::class.java))
-                    my_recycler_view.adapter=adapter
+                     my_recycler_view.adapter=adapter
                     my_recycler_view.layoutManager= LinearLayoutManager(this)
                 } else{
                     txtVwResultado.visibility=View.VISIBLE
-                    setContentView(R.layout.layout_message_erro)
                 }
             }
             .addOnFailureListener{
