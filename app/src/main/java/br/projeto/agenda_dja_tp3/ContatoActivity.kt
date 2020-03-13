@@ -1,12 +1,17 @@
 package br.projeto.agenda_dja_tp3
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.projeto.agenda_dja_tp3.model.User
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_contato.*
+import kotlin.math.absoluteValue
+
 
 class ContatoActivity : AppCompatActivity() {
 
@@ -16,7 +21,9 @@ class ContatoActivity : AppCompatActivity() {
     private var adapter = UserAdapter(users, this::onUserItemClick)
 
     private fun onUserItemClick(user: User){
-        Toast.makeText(baseContext, "", Toast.LENGTH_LONG).show()
+        var intent = Intent(baseContext, DetailsActivity::class.java)
+        intent.putExtra("user", user)
+        startActivity(intent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,4 +46,5 @@ class ContatoActivity : AppCompatActivity() {
                 Toast.makeText(baseContext, "Erro", Toast.LENGTH_LONG).show()
             }
     }
+
 }
